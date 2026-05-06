@@ -8,12 +8,6 @@ import {
   fixtureCatalog,
 } from './lib/fixtures';
 
-function formatNumber(value: number): string {
-  return new Intl.NumberFormat('ru-RU', {
-    maximumFractionDigits: 0,
-  }).format(value);
-}
-
 export default function App() {
   const [length, setLength] = useState(5);
   const [width, setWidth] = useState(5);
@@ -158,14 +152,6 @@ export default function App() {
                 <strong>
                   {result.roomArea.toFixed(1)} м<sup>2</sup>
                 </strong>
-              </div>
-              <div>
-                <span>требуемый поток с учетом высоты</span>
-                <strong>{formatNumber(result.requiredLumens)} лм</strong>
-              </div>
-              <div>
-                <span>коэффициент использования</span>
-                <strong>{result.utilizationFactor.toFixed(2)}</strong>
               </div>
               <div>
                 <span>количество светильников</span>
